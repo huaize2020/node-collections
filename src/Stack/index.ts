@@ -1,21 +1,21 @@
-export default class Queue<T> {
+export default class Stack<T> {
   private data: T[];
 
   constructor() {
     this.data = [];
   }
 
-  enqueue(value: T) {
+  push(value: T) {
     this.data.push(value);
   }
 
-  dequeue(): T | undefined {
+  pop(): T | undefined {
     if (this.size() === 0) return;
-    return this.data.shift();
+    return this.data.pop();
   }
 
   peek(): T {
-    return this.data[0];
+    return this.data[this.size() - 1];
   }
 
   size(): number {
