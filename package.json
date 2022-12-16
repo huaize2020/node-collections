@@ -2,24 +2,35 @@
   "name": "node-collections",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
-  "author": "banny560008@vip.qq.com",
+  "main": "./dist/index.js",
+  "authors": {
+    "name": "huaize2020",
+    "email": "banny560008@vip.qq.com"
+  },
+  "homepage": "https://github.com/huaize2020/node-collections#readme",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/huaize2020/node-collections/issues"
   },
-  "homepage": "https://github.com/huaize2020/node-collections#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huaize2020/node-collections.git"
+  },
   "scripts": {
+    "build": "rimraf dist && tsc",
     "clean": "rimraf node_modules",
     "test": "jest",
     "test:cov": "jest --coverage",
     "precommit": "lint-staged",
     "prepare": "husky install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/huaize2020/node-collections.git"
-  },
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "package.json",
+    "README.md"
+  ],
   "devDependencies": {
     "@types/jest": "^29.2.4",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
